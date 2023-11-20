@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"errors"
 	"net/http"
+	"os"
 	"strings"
 
 	"github.com/Hafidzurr/project3_group2_glng-ks-08/internal/models"
@@ -11,7 +12,7 @@ import (
 	"gorm.io/gorm"
 )
 
-var JwtKey = []byte("Hafidzurr1")
+var JwtKey = []byte(os.Getenv("JWT_KEY"))
 
 func SendJSONResponse(w http.ResponseWriter, v interface{}) {
 	encoder := json.NewEncoder(w)
