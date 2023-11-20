@@ -3,6 +3,7 @@ package main
 import (
 	"log"
 	"net/http"
+	"os"
 
 	"github.com/Hafidzurr/project3_group2_glng-ks-08/internal/config"
 	"github.com/Hafidzurr/project3_group2_glng-ks-08/internal/controllers"
@@ -27,6 +28,12 @@ func main() {
 	router := mux.NewRouter()
 	routes.RegisterRoutes(router, db)
 
-	log.Println("Server is running on http://localhost:8080")
-	log.Fatal(http.ListenAndServe(":8080", router))
+	// Mendapatkan port dari variabel lingkungan PORT
+	port := os.Getenv("PORT")
+	if port == "" {
+		log.Fatal("$PORT must be set")
+	}
+
+	log.Printf("Server is running on http://localhost:%s", port)
+	log.Fatal(http.ListenAndServe(":"+port, router))
 }
