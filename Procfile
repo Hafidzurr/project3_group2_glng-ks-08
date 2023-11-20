@@ -1,1 +1,2 @@
-web: ./main migrate
+release: ./main migrate
+web: ./main
