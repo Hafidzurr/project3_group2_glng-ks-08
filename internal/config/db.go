@@ -2,13 +2,15 @@ package config
 
 import (
 	"fmt"
-
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
+	"os"
 )
 
 func ConnectDB() (*gorm.DB, error) {
-	dsn := "host=localhost user=postgres dbname=Kanban_Board_db password=Hafidzurr1 sslmode=disable"
+	// Menggunakan DATABASE_URL dari variabel lingkungan
+	dsn := os.Getenv("DATABASE_URL")
+
 	db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
 	if err != nil {
 		fmt.Println("Failed to connect to the database. Error:", err)
