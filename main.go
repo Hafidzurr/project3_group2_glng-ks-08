@@ -18,7 +18,6 @@ func main() {
 		log.Fatalf("Error connecting to database: %v\n", err)
 	}
 
-	// Initialize Admin User
 	controllers.InitializeAdminUser(db)
 
 	if err := migrations.Migrate(db); err != nil {
@@ -28,7 +27,6 @@ func main() {
 	router := mux.NewRouter()
 	routes.RegisterRoutes(router, db)
 
-	// Mendapatkan port dari variabel lingkungan PORT
 	port := os.Getenv("PORT")
 	if port == "" {
 		log.Fatal("$PORT must be set")
