@@ -6,7 +6,6 @@ import (
 
 	"github.com/Hafidzurr/project3_group2_glng-ks-08/internal/config"
 	"github.com/Hafidzurr/project3_group2_glng-ks-08/internal/controllers"
-	"github.com/Hafidzurr/project3_group2_glng-ks-08/internal/migrations"
 	"github.com/Hafidzurr/project3_group2_glng-ks-08/internal/routes"
 	"github.com/gorilla/mux"
 )
@@ -19,10 +18,6 @@ func main() {
 
 	// Initialize Admin User
 	controllers.InitializeAdminUser(db)
-
-	if err := migrations.Migrate(db); err != nil {
-		log.Fatalf("Failed to run migrations: %v\n", err)
-	}
 
 	router := mux.NewRouter()
 	routes.RegisterRoutes(router, db)
