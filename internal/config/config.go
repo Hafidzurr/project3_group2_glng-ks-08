@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"errors"
 	"net/http"
+	"os"
 	"strings"
 
 	"github.com/Hafidzurr/project3_group2_glng-ks-08/internal/models"
@@ -11,7 +12,13 @@ import (
 	"gorm.io/gorm"
 )
 
-var JwtKey = []byte("Hafidzurr1")
+var JwtKey = []byte(os.Getenv("JWT_KEY"))
+
+func init() {
+	if len(JwtKey) == 0 {
+		JwtKey = []byte("bMLRrApp4zf6qzWoMa-brT6HMwG5Lp5VY8l1Y-K34Xwsm8B3-kB9p7pcRoWKP8jafaTuCylxPMllgz6uFT6zfQ") // Fallback key
+	}
+}
 
 func SendJSONResponse(w http.ResponseWriter, v interface{}) {
 	encoder := json.NewEncoder(w)
