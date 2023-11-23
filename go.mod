@@ -1,6 +1,6 @@
 module github.com/Hafidzurr/project3_group2_glng-ks-08
 
-go 1.21.0
+go 1.21
 
 require (
 	github.com/golang-jwt/jwt/v4 v4.5.0
