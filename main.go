@@ -25,7 +25,7 @@ func main() {
 
 	port := os.Getenv("PORT")
 	if port == "" {
-		port = "8080" // Default port jika tidak dijalankan di Heroku
+		port = "8080" // Default port jika tidak dijalankan di platform deploy
 	}
 
 	log.Println("Server is running on http://localhost:" + port)
