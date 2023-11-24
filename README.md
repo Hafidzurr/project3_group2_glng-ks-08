@@ -56,17 +56,26 @@ git push -u origin master or your name for repo banch
 ##### Create `New Project` -> Choose `Deploy from github Repo -> Choose `Your Repo Name` -> Wait Deploying Untill Getting Error
 
 #### 4. Adding Postgres SQL into Your Project
+##### Choose `New` -> Choose `Database` -> Choose `Postgres SQL` -> Wait Deploying Untill Getting Error
 
-
-
-
-##### Create database in postgres SQL with name `kanban_board` or you can change whats name you like, but coution here you must change database name in `db.go` too.
-
-##### Go to db.go, comment line code from `dns = fmt.Sprintf` - `dbname, dbPort)` and uncomment line code `dsn = "host=host...`
-
-##### change your `db credential` in `db.go`
-
-#### 3. Run 
+#### 5. .env & .gitignore
+##### Edit `.env` in local or there is no, you can create `.env` and adding : 
 ```
-go run main.go
+DB_HOST=**your_db_host**
+DB_PORT=**your_db_port**
+DB_USER=**your_db_user**
+DB_PASSWORD=**your_db_password**
+DB_NAME=**your_db_name**
 ```
+##### Change Variable with your own variable getting from Railway, to see your variable, you can see them in your `postgres SQL` and go to `variables`.
+
+#####  Edit `.gitignore` in local or there is no, you can create `.gitignore` and adding :
+```
+.env
+```
+##### Push your changes
+
+#### 6. Adding `.env` Variables
+##### Adding whole variable on `.env, into `your project` and go to `variables`, adding in one by one.
+##### Now wait deploying and after that you can create your own domain.
+
