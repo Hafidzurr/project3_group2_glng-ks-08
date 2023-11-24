@@ -53,7 +53,7 @@ git remote set-url origin https://github.com/new_user/new_repo.git
 git push -u origin master or your name for repo banch
 ```
 #### 3. Create Account Railway using your github Account and Login
-###### Create `New Project` -> Choose `Deploy from github Repo -> Choose `Your Repo Name` -> Wait Deploying Untill Getting Error
+###### Create `New Project` -> Choose `Deploy from github Repo` -> Choose `Your Repo Name` -> Wait Deploying Untill Getting Error
 
 #### 4. Adding Postgres SQL into Your Project
 ###### Choose `New` -> Choose `Database` -> Choose `Postgres SQL` -> Wait Deploying Untill Getting Error
