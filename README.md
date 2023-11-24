@@ -18,8 +18,8 @@
 ## Installation Local
 #### 1. Open terminal or command prompt
 ```
-git clone https://github.com/Hafidzurr/project1_group2_glng-ks-08.git
-cd project1_group2_glng-ks-08
+git clone https://github.com/Hafidzurr/project3_group2_glng-ks-08
+cd project3_group2_glng-ks-08
 go mod tidy
 ```
 #### 2. Setting Database 
@@ -38,8 +38,8 @@ go run main.go
 ## Installation and Deploying to Railway
 #### 1. Open terminal or command prompt
 ```
-git clone https://github.com/Hafidzurr/project1_group2_glng-ks-08.git
-cd project1_group2_glng-ks-08
+git https://github.com/Hafidzurr/project3_group2_glng-ks-08
+cd project3_group2_glng-ks-08
 go mod tidy
 ```
 #### 2. Push into Your New Repo
