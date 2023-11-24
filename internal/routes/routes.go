@@ -1,12 +1,18 @@
 package routes
 
 import (
+	"fmt"
+	"net/http"
+
 	"github.com/Hafidzurr/project3_group2_glng-ks-08/internal/controllers"
 	"github.com/gorilla/mux"
 	"gorm.io/gorm"
 )
 
 func RegisterRoutes(router *mux.Router, db *gorm.DB) {
+	router.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		fmt.Fprintln(w, "API Project 3 Kelompok 2")
+	})
 	// User routes
 	router.HandleFunc("/users/register", controllers.RegisterUser(db)).Methods("POST")
 	router.HandleFunc("/users/login", controllers.LoginUser(db)).Methods("POST")

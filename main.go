@@ -25,7 +25,7 @@ func main() {
 
 	port := os.Getenv("PORT")
 	if port == "" {
-		port = "8080" // Default port jika tidak dijalankan di platform deploy
+		port = "8080"
 	}
 
 	log.Println("Server is running on http://localhost:" + port)
