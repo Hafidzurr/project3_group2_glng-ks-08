@@ -24,11 +24,49 @@ go mod tidy
 ```
 #### 2. Setting Database 
 
-Create database in postgres SQL with name `todo` or you can change whats name you like, but coution here you must change `main.go` too.
+##### Create database in postgres SQL with name `kanban_board` or you can change whats name you like, but coution here you must change database name in `db.go` too.
+
+##### Go to db.go, comment line code from `dns = fmt.Sprintf` - `dbname, dbPort)` and uncomment line code `dsn = "host=host...`.
+
+##### change your `db credential` in `db.go`.
+
 
 #### 3. Run 
 ```
-swag init
 go run main.go
 ```
+## Installation and Deploying to Railway
+#### 1. Open terminal or command prompt
+```
+git clone https://github.com/Hafidzurr/project1_group2_glng-ks-08.git
+cd project1_group2_glng-ks-08
+go mod tidy
+```
+#### 2. Push into Your New Repo
+##### Create a New Repository in Your Github Account
+##### Change the Remote URL
+```
+git remote set-url origin https://github.com/new_user/new_repo.git
+```
+##### Push to the New Repository 
+```
+git push -u origin master or your name for repo banch
+```
+#### 3. Create Account Railway using your github Account and Login
+##### Create `New Project` -> Choose `Deploy from github Repo -> Choose `Your Repo Name` -> Wait Deploying Untill Getting Error
 
+#### 4. Adding Postgres SQL into Your Project
+
+
+
+
+##### Create database in postgres SQL with name `kanban_board` or you can change whats name you like, but coution here you must change database name in `db.go` too.
+
+##### Go to db.go, comment line code from `dns = fmt.Sprintf` - `dbname, dbPort)` and uncomment line code `dsn = "host=host...`
+
+##### change your `db credential` in `db.go`
+
+#### 3. Run 
+```
+go run main.go
+```
