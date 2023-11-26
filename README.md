@@ -42,6 +42,8 @@ git https://github.com/Hafidzurr/project3_group2_glng-ks-08
 cd project3_group2_glng-ks-08
 go mod tidy
 ```
+###### ! make sure go version in go mod is in accordance with the railway version use
+
 #### 2. Push into Your New Repo
 ###### a. Create a New Repository in Your Github Account
 ###### b. Change the Remote URL
@@ -61,11 +63,11 @@ git push -u origin master or your name for repo banch
 #### 5. .env & .gitignore
 ###### a. Edit `.env` in local or there is no, you can create `.env` and adding : 
 ```
-DB_HOST=**your_db_host**
-DB_PORT=**your_db_port**
-DB_USER=**your_db_user**
-DB_PASSWORD=**your_db_password**
-DB_NAME=**your_db_name**
+PGDATABASE=**your_pgdatabase**
+PGHOST=**your_pghost**
+PGPORT=**your_pgport**
+PGUSER=**your_pguser**
+PGPASSWORD=**your_pgpassword**
 ```
 ######  b. Change Variable with your own variable getting from Railway, to see your variable, you can see them in your `postgres SQL` and go to `variables`.
 
